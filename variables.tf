@@ -15,12 +15,16 @@ variable "vpc_tags" {
     type = map
     default = {}  
 }
-variable "iwg_tags" {
+variable "igw_tags" {
     type = map(string)
     default = {} 
 }
 variable "cidr_subnet_block" {
     type = list(string)
-    default = [  ]
+    default = ["10.0.1.0/24","10.0.2.0/24"]
   
+}
+variable "public_subnet_tags" {
+    type = map(string)
+    default = {}
 }
