@@ -17,7 +17,7 @@ resource "aws_subnet" "main" {
   count = length(var.cidr_subnet_block)
   cidr_block = var.cidr_subnet_block[count.index]
   availability_zone = local.az_names[count.index]
-  map_customer_owned_ip_on_launch = true
+  map_public_ip_on_launch = true
 
   tags = merge(
     local.common_tags,
