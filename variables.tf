@@ -12,7 +12,7 @@ variable "cidr_block" {
   
 }
 variable "vpc_tags" {
-    type = string
+    type = map
     default = {}
   
 }
