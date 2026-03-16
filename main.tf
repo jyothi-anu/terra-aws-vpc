@@ -65,18 +65,18 @@ resource "aws_subnet" "database" {
 resource "aws_route_table" "public" {
   vpc_id = aws_vpc.main.id
 
-  tags = local.final_public_route_tables_tags
+  tags = local.final_public_route_table_tags
 }
 
 resource "aws_route_table" "private" {
   vpc_id = aws_vpc.main.id
 
-  tags = local.final_private_route_tables_tags
+  tags = local.final_private_route_table_tags
 }
 resource "aws_route_table" "database" {
   vpc_id = aws_vpc.main.id
 
-  tags = local.final_database_route_tables_tags
+  tags = local.final_database_route_table_tags
 }
 #create route for public
 resource "aws_route" "public" {
