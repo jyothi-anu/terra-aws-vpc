@@ -20,6 +20,20 @@ locals {
       },
       var.public_route_table_tags
  )
+ final_private_route_table_tags = merge(
+      local.common_tags,
+      {
+            Name = "${var.project}-${var.environment}"
+      },
+      var.private_route_table_tags
+ )
+ final_database_route_table_tags = merge(
+      local.common_tags,
+      {
+            Name = "${var.project}-${var.environment}"
+      },
+      var.database_route_table_tags
+ )
  final_eip_tags = merge(
       {
             Name = "${var.project}-${var.environment}"
