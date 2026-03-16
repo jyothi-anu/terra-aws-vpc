@@ -16,21 +16,21 @@ locals {
  final_public_route_table_tags = merge(
       local.common_tags,
       {
-            Name = "${var.project}-${var.environment}"
+            Name = "${var.project}-${var.environment}-public"
       },
       var.public_route_table_tags
  )
  final_private_route_table_tags = merge(
       local.common_tags,
       {
-            Name = "${var.project}-${var.environment}"
+            Name = "${var.project}-${var.environment}-private"
       },
       var.private_route_table_tags
  )
  final_database_route_table_tags = merge(
       local.common_tags,
       {
-            Name = "${var.project}-${var.environment}"
+            Name = "${var.project}-${var.environment}-database"
       },
       var.database_route_table_tags
  )
